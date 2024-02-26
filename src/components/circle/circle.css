@@ -1,0 +1,24 @@
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.circle{
+    height: 100px;
+    width: 100px;
+    background-color: lightcoral;   
+    cursor: pointer;
+    transition: 2s all ease-out ;
+}
+
+.circle:hover{
+    width: 200px;
+    height: 200px;
+    background-color: crimson;
+    border-radius: 50%;
+
+}

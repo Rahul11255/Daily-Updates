@@ -1,0 +1,82 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:lightcoral;
+}
+
+.card {
+    width: 320px;
+    height: 500px;
+    border-radius: 10px;
+    border: 5px solid white;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card_body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    right: 0;
+    background-color: rgba(33, 73, 73, 0.322);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 30px;
+    transition: top 0.5s, opacity 0.5s ease 0.5s;
+    opacity: 0;
+}
+
+.card_body h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition: 4s;
+}
+
+.card_body p {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    margin-top: 30px;
+}
+
+.card_body button {
+    width: 120px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    outline: none;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 15px;
+    background-color: rgb(4, 59, 59);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.6s ease 1s;
+}
+
+.card_body button:active {
+    background-color: rgb(26, 153, 153);
+    transform: translateY(-2px);
+}
+
+.card:hover .card_body {
+    top: 0;
+    opacity: 1;
+}
+
+.card:hover .card_body button {
+    opacity: 1;
+}
